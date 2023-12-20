@@ -81,7 +81,9 @@ module.exports = {
         // 单行时可以接收最大数量
         singleline: 3,
         // 多行时可以接收最大数量
-        multiline: 1,
+        multiline: {
+          max: 1,
+        },
       },
     ],
     'vue/attributes-order': [
@@ -110,17 +112,18 @@ module.exports = {
         allowCoexistStyle: true,
       },
     ],
-    // 'vue/first-attribute-linebreak': [
-    //   2,
-    //   {
-    //     // 单行时，第一属性前不允许使用换行符
-    //     // singleline: 'beside',
-    //     // 多行时，第一属性前必须使用换行符
-    //     // multiline: 'below',
-    //   },
-    // ],
+    'vue/first-attribute-linebreak': [
+      2,
+      {
+        // 单行时，第一属性前不允许使用换行符
+        singleline: 'beside',
+        // 多行时，第一属性前必须使用换行符
+        multiline: 'below',
+      },
+    ],
     'vue/singleline-html-element-content-newline': 'off',
     'vue/multiline-html-element-content-newline': 'off',
+    'vue/no-spaces-around-equal-signs-in-attribute': ['error'],
     'vue/no-v-html': 'off',
     'accessor-pairs': 2,
     'arrow-spacing': [

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { x, y } = useMouse()
 const userStore = useUserStore()
-
+const us = () => {}
 </script>
 
 <template>
@@ -11,7 +11,13 @@ const userStore = useUserStore()
       (Vueuse)Mouse Position:
       {{ x }}, {{ y }}
     </code>
-    <el-button type="primary">按钮</el-button>
+    <el-button
+      type="primary"
+      loading
+      text
+      bg
+      @click="us"
+    >按钮</el-button>
   </div>
 </template>
 
